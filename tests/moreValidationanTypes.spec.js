@@ -42,7 +42,7 @@ test("Screenshot test and Visual Comparsion", async({page})=>
     await expect(page.locator("#displayed-text")).toBeHidden();
 });
 
-test('visual validation with comparison', async ({page}) => {
-    await page.goto("https://rahulshettyacademy.com/AutomationPractice/");
+test.only('visual validation with comparison', async ({page}) => {
+    await page.goto("https://rahulshettyacademy.com/angularpractice/");
     expect(await page.screenshot()).toMatchSnapshot('landing.png');
 });
