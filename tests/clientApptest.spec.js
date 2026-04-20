@@ -96,7 +96,7 @@ test('Ekart Client App login and Playwright end-end test', async ({page})=>
 
     for(let i=0; i < rowsCount; ++i)
     {
-        const row = rows.nth(i)
+        const row = rows.nth(i);
         const rowOrderId = await row.locator("th").textContent();
         if(orderId.includes(rowOrderId))
         {
