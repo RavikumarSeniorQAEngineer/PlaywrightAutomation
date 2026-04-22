@@ -3,16 +3,21 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "webTests": "npx playwright test --grep @Web",
+    "apiTests": "npx playwright test --grep @API",
+    "safariWebTests": "npx playwright test --grep @Web --config playwright.config1.js --project=safari"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
     "@playwright/test": "^1.58.2",
-    "@types/node": "^25.3.0"
+    "@types/node": "^25.3.0",
+    "allure-playwright": "^3.7.1"
   },
-    "dependencies": {
+  "dependencies": {
     "exceljs": "^4.4.0"
   }
 }

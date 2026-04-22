@@ -11,6 +11,7 @@ import { trace } from 'node:console';
 
 const config = ({
   testDir: './tests',
+  retries: 2,
   timeout: 30 * 1000,
   expect: {
     timeout: 5 * 1000

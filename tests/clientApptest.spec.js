@@ -1,7 +1,7 @@
 const {test, expect} = require('@playwright/test');
 
-
-test('Ekart Ecommerce Playwright test', async ({page})=> 
+// test.skip beacuse same implementation with PO is runing in different file
+test.skip('Ekart Ecommerce Playwright test', async ({page})=> 
 {
     await page.goto("https://rahulshettyacademy.com/client");
     console.log(await page.title());
@@ -23,7 +23,8 @@ test('Ekart Ecommerce Playwright test', async ({page})=>
 
 });
 
-test('Ekart Client App login and Playwright end-end test', async ({page})=> 
+// test.skip beacuse same implementation with PO is runing in different file
+test.skip('Ekart Client App login and Playwright end-end test', async ({page})=> 
 {
     const email = "ravikumarifocus1@gmail.com";
     const productName = "ZARA COAT 3";

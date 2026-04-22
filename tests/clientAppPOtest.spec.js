@@ -5,7 +5,7 @@ const {customtest} = require("../utils/test-base");
 const dataset = JSON.parse(JSON.stringify(require('../utils/PlaceOrderTestdata.json')));
 
 for (const data of dataset){
-test(`Ekart Client App login and Playwright end-end test ${data.productName}`, async ({page})=> 
+test(`@Web Ekart Client App login and Playwright end-end test ${data.productName}`, async ({page})=> 
 {
     const poManager = new POManager(page);
     const loginpage = poManager.getLoginPage();
@@ -39,7 +39,7 @@ test(`Ekart Client App login and Playwright end-end test ${data.productName}`, a
 });
 }
 
-customtest.only("Ekart Client end-end test using custom fixture", async ({page, testDataForOrder})=> 
+customtest("Ekart Client end-end test using custom fixture", async ({page, testDataForOrder})=> 
 {
     const poManager = new POManager(page);
     const loginpage = poManager.getLoginPage();

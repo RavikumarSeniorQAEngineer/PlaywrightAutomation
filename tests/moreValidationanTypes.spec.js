@@ -1,5 +1,7 @@
 const {test, expect} = require('@playwright/test');
 
+//test.describe.configure({mode: "parallel"});
+test.describe.configure({mode: "serial"});
 test('popup handling', async({page}) =>
 {
     await page.goto("https://rahulshettyacademy.com/AutomationPractice/");
@@ -42,7 +44,7 @@ test("Screenshot test and Visual Comparsion", async({page})=>
     await expect(page.locator("#displayed-text")).toBeHidden();
 });
 
-test.only('visual validation with comparison', async ({page}) => {
+test('visual validation with comparison', async ({page}) => {
     await page.goto("https://rahulshettyacademy.com/angularpractice/");
     expect(await page.screenshot()).toMatchSnapshot('landing.png');
 });
