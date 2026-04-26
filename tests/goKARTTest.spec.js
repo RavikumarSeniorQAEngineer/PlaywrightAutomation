@@ -1,6 +1,6 @@
 const {test, expect} = require('@playwright/test');
 
-test('Go kart Playwright test', async ({page})=> 
+test('@Web Go kart Playwright test', async ({page})=> 
 {
     await page.goto("https://rahulshettyacademy.com/seleniumPractise/#/");
     console.log(await page.title());

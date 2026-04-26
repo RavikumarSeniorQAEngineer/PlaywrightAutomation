@@ -19,8 +19,8 @@ test(`@Web Ekart Client App login and Playwright end-end test ${data.productName
     await dashboardPage.navigateToCart();
     
     const cartPage = poManager.getCartPage();
-    cartPage.verifyProductIsDisplayed(data.productName);
-    cartPage.goToCheckout();
+    await cartPage.verifyProductIsDisplayed(data.productName);
+    await cartPage.goToCheckout();
 
     const ordersReviewPage = poManager.getOrdersReviewPage();
     await ordersReviewPage.searchCountryAndSelect("ind"," India");
@@ -32,7 +32,7 @@ test(`@Web Ekart Client App login and Playwright end-end test ${data.productName
     await dashboardPage.navigateToOrders();
 
     const ordersHistoryPage = poManager.getOrdersHistoryPage();
-    ordersHistoryPage.searchOrderAndSelect(orderId);
+    await ordersHistoryPage.searchOrderAndSelect(orderId);
     expect(orderId.includes(await ordersHistoryPage.getOrderId())).toBeTruthy();
 
     // await page.pause();

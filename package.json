@@ -6,18 +6,22 @@
   "scripts": {
     "webTests": "npx playwright test --grep @Web",
     "apiTests": "npx playwright test --grep @API",
-    "safariWebTests": "npx playwright test --grep @Web --config playwright.config1.js --project=safari"
+    "safariWebTests": "npx playwright test --grep @Web --config playwright.config1.js --project=safari",
+    "cucumberRegression": "npx cucumber-js features/Ecommerce.feature --parallel 2 --retry 1 --exit --format html:cucumber-report.html"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "@azure/identity": "^4.13.1",
+    "@azure/playwright": "^1.1.5",
     "@playwright/test": "^1.58.2",
     "@types/node": "^25.3.0",
     "allure-playwright": "^3.7.1"
   },
   "dependencies": {
+    "@cucumber/cucumber": "^12.8.1",
     "exceljs": "^4.4.0"
   }
 }
