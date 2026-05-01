@@ -7,7 +7,8 @@
     "webTests": "npx playwright test --grep @Web",
     "apiTests": "npx playwright test --grep @API",
     "safariWebTests": "npx playwright test --grep @Web --config playwright.config1.js --project=safari",
-    "cucumberRegression": "npx cucumber-js features/Ecommerce.feature --parallel 2 --retry 1 --exit --format html:cucumber-report.html"
+    "cucumberRegression": "npx cucumber-js features/Ecommerce.feature --parallel 2 --retry 1 --exit --format html:cucumber-report.html",
+    "azureCloudRun" : "npx playwright test --grep @Web --config=playwright.service.config.js --workers=2"
   },
   "keywords": [],
   "author": "",
