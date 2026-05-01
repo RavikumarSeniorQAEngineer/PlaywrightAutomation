@@ -35,7 +35,7 @@ test(`@Web Ekart Client App login and Playwright end-end test ${data.productName
     await ordersHistoryPage.searchOrderAndSelect(orderId);
     expect(orderId.includes(await ordersHistoryPage.getOrderId())).toBeTruthy();
 
-    // await page.pause();
+    // await page.pause();  -> to view in UI when run the test in UI mode
 });
 }
 
